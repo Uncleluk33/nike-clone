@@ -1,0 +1,56 @@
+// @mixin small {
+//     @media only screen and (max-width: 600px){
+//         @content
+//     }
+// }
+
+$bp-medium: 50em;
+
+*,in
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; //10px
+
+    @media only screen and (max-width: $bp-medium){
+        font-size: 50%;    
+    }
+}
+
+
+body{
+    background-image: linear-gradient(to right, #c2e1e8, #96c3cc);
+    font-family: 'Mallanna', sans-serif;
+
+}
+
+.container{
+    width: 95vw;
+    background-color: #fff;
+    margin: 15rem auto;
+    box-shadow: 2rem 1rem 5rem rgba( #444, 0.3); 
+    display: grid;
+    grid-template-columns: 50% 50%;
+   
+}
+
+@media only screen and (max-width: 600px){
+    
+    .container{
+        width: 100vw;
+    }
+      
+}
+
+// @include small{
+//     .container{
+//         width: 100vw;
+//         margin-top: 30vh;                
+//     }
+// }
